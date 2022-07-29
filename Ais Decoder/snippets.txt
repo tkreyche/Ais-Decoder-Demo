@@ -1,0 +1,116 @@
+    #if y.msg_type == 1:
+        #print( y.name )
+
+
+      #print(y)
+      #print()
+
+    #if x.count > 1:
+       # y = decode(*x)
+    #else:    
+       # y = decode(x[0])
+
+
+for msg in UDPReceiver(host, port):
+    print(msg.decode())
+    # do something with it
+
+
+decoded = decode(b"!AIVDM,1,1,,B,15NG6V0P01G?cFhE`R2IU?wn28R>,0*05")
+print(decoded)
+
+decoded = decode(b"!AIVDM,1,1,,B,15NG6V0P01G?cFhE`R2IU?wn28R>,0*05")
+as_dict = decoded.asdict()
+print(as_dict)
+
+
+decoded = decode(b"!AIVDM,1,1,,B,15NG6V0P01G?cFhE`R2IU?wn28R>,0*05")
+as_dict = decoded.asdict()
+print(as_dict)
+
+
+    try:
+        decoded = decode(data)
+        as_dict = decoded.asdict()
+        #print(as_dict)
+    except:
+        print("error")
+
+        
+        #csv = data.decode()
+        #count = data.count(33)
+        print(count)
+
+        if count > 1:
+            #s2 = csv.split('!')
+            b2 = data.split(33)
+            decoded = decode(*b2)
+            print(decoded)
+
+        #print(len(csv))
+        
+        
+        #if len(csv) > 100:
+            
+        #print("xxxx")
+        #csv_line = csv.split(',')
+        #print(csv_line[1], csv_line[2], csv_line[3])
+        #print(csv)
+
+
+        
+
+import socket
+
+UDP_IP = "127.0.0.1"
+UDP_PORT = 5005
+
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.bind((UDP_IP, UDP_PORT))
+
+while True:
+    data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
+    #print("received message: %s" % data)
+
+    try:
+
+
+
+        print(data.decode())
+
+
+
+    except:
+        print("couldn't parse")
+
+        
+UDP_IP = "127.0.0.1"
+UDP_PORT = 5006
+
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.bind((UDP_IP, UDP_PORT))
+
+while True:
+    data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
+    print("received message: %s" % data)
+
+    try:
+
+
+
+        print(data.decode())
+
+
+
+    except:
+        print("couldn't parse")
+
+
+
+
+
+
+
+
+
+
